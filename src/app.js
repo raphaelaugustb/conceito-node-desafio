@@ -37,6 +37,7 @@ app.put("/repositories/:id", (request, response) => {
   }   
    
   const project = {
+    id,
     title,
     url,
     techs,
