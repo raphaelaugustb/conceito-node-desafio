@@ -60,7 +60,7 @@ app.delete("/repositories/:id", (request, response) => {
   }
   const repositoriesIndex = repositories.findIndex(repositories => repositories.id === id)
   if(repositoriesIndex < 0){
-    return response.status(404).json({ error:"Project not Found" })
+    return response.status(400).json({ error:"Project not Found" })
   }else{
   repositories.splice(repositoriesIndex,1)
   }
